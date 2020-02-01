@@ -2,7 +2,7 @@
 
 [ext_resource path="res://GFX/Characters/Character.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
-[ext_resource path="res://Audio/Sounds/footsteps_indoor.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/Sounds/footsteps_wood.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.7935
@@ -22,5 +22,5 @@ shape = SubResource( 1 )
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
-volume_db = 24.0
+volume_db = 5.0
 area_mask = 7
