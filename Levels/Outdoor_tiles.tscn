@@ -1,0 +1,96 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://GFX/Environment/Nature_grass_tile.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Environment/Red_brick_wall.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Environment/Concrete_brick_wall.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Environment/Nature_Tree02.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Environment/Metal_crate.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Environment/Nature_Tree01.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Environment/Pavement_tile.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Environment/Pavement_tile_cracked.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Environment/Steel_Door.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.5733, 16.4063 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.5816, 31.8695 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14.5062, 31.511 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14.6571, 14.3038 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 16.0909, 16.0965 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 17.1564, 3.67572 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="brick_wall" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="brick_wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick_wall/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="tree1" type="Sprite" parent="."]
+position = Vector2( 76.3569, -15.0563 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tree1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree1/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="tree2" type="Sprite" parent="."]
+position = Vector2( 160.242, -15.0563 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tree2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree2/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="grass" type="Sprite" parent="."]
+position = Vector2( 15.7733, 63.4515 )
+texture = ExtResource( 1 )
+
+[node name="crate" type="Sprite" parent="."]
+position = Vector2( 84.2435, 62.376 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="crate"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crate/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="pavement" type="Sprite" parent="."]
+position = Vector2( 15.7733, 131.922 )
+texture = ExtResource( 7 )
+
+[node name="pavement_cracked" type="Sprite" parent="."]
+position = Vector2( 85.9604, 132.299 )
+texture = ExtResource( 8 )
+
+[node name="brick_wall_red" type="Sprite" parent="."]
+position = Vector2( -0.07547, -38.6407 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="brick_wall_red"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick_wall_red/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="door_steel" type="Sprite" parent="."]
+position = Vector2( 133.504, 62.4594 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door_steel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door_steel/StaticBody2D"]
+shape = SubResource( 6 )
