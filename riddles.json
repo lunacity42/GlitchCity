@@ -1,0 +1,22 @@
+{
+	"light": [
+		"def turn_on(lamp):\n    if lamp.is_off():\n        lamp.switch.****()",
+		"flip"
+	],
+	"ladder": [
+		"def help(child):\n    self.build(ladder)\n    while *****.y_position < 0:\n        child.y_position++",
+		"child"
+	],
+	"bridge": [
+		"def cross_gap():\n    if not bridge:\n        self.build(******)\n        self.cross(gap)",
+		"bridge"
+	],
+	"fire": [
+		"def extinguish_fire():\n    while flames.height > 0:\n        weather.****()",
+		"rain"
+	],
+	"storm": [
+		"def save_the_world():\n    print(\"AAAAAAA!!!\")\n    panic()\n    try:\n        command(*****)\n    except InternalWeatherError:\n        sys.exit(1)",
+		"storm"
+	]
+}
