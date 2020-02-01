@@ -16,9 +16,6 @@ func _on_GlitchRigid_input_event(viewport, event, shape_idx):
 		print("yay")
 		$CanvasLayer/GlitchPuzzle.popup_centered()
 
-func glitch_removed():
-	queue_free()
-
 
 func _on_GlitchPuzzle_code_correct():
 	$CanvasLayer/GlitchPuzzle.hide()
