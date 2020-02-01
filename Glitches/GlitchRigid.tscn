@@ -30,6 +30,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite"]
@@ -43,6 +44,7 @@ stream = ExtResource( 4 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GlitchPuzzle" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = true
 [connection signal="area_shape_entered" from="." to="." method="_on_GlitchRigid_area_shape_entered"]
 [connection signal="body_entered" from="." to="." method="_on_GlitchRigid_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_GlitchRigid_body_exited"]

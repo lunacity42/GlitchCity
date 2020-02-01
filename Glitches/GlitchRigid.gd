@@ -15,7 +15,11 @@ func _on_GlitchRigid_input_event(viewport, event, shape_idx):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) and in_glitch_area:
 		print("yay")
 		$CanvasLayer/GlitchPuzzle.popup_centered()
-
+	
+func _input(event):
+	if event.is_action_pressed("interact") and in_glitch_area:
+		print("key pressed")
+		$CanvasLayer/GlitchPuzzle.popup_centered()
 
 func _on_GlitchPuzzle_code_correct():
 	$CanvasLayer/GlitchPuzzle.hide()

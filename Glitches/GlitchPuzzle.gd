@@ -46,7 +46,7 @@ func update_display():
 	
 func count_remaining_asterisks():
 	var remaining_asterisks = ""
-	for i in range(key_word.size() - guess.size()):
+	for _i in range(key_word.size() - guess.size()):
 		remaining_asterisks += "*"
 	return remaining_asterisks
 
