@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pet the Cat.ogg-0f2bc77a196dd242826ee6582dcf45b0.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/Pet the Cat.ogg"
+dest_files=[ "res://.import/Pet the Cat.ogg-0f2bc77a196dd242826ee6582dcf45b0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

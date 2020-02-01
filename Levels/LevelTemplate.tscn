@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Levels/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Glitches/Glitch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio/Music/Pet the Cat_bass.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Glitches/GlitchRigid.tscn" type="PackedScene" id=5]
 
 [node name="LevelTemplate" type="Node2D"]
@@ -24,3 +25,7 @@ position = Vector2( 496.383, 272.037 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 116.145, 102.178 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true

@@ -1,14 +1,15 @@
 extends Popup
 
-onready var display = $VBoxContainer/DisplayContainer/Display
+onready var display = $VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer/Display
 
 var key_word = ["c","o","d","e"]
 var guess = []
 
 signal code_correct
 
-func _on_GlitchPuzzle_code_correct():
-	print("code correct")
+#func _on_GlitchPuzzle_code_correct():
+#	print("code correct")
+#	hide()
 
 func _ready():
 	connect_buttons()
@@ -43,9 +44,6 @@ func update_display():
 func reset_lock():
 	display.text = ""
 	guess.clear()
-
-
-
 
 
 

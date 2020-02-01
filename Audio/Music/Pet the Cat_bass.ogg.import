@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pet the Cat_bass.ogg-28724fb3f4f1833a030b96e89161f625.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/Pet the Cat_bass.ogg"
+dest_files=[ "res://.import/Pet the Cat_bass.ogg-28724fb3f4f1833a030b96e89161f625.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

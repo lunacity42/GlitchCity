@@ -6,10 +6,10 @@
 [ext_resource path="res://Audio/Sounds/electric_hum2.wav" type="AudioStream" id=4]
 [ext_resource path="res://Glitches/GlitchPuzzle.tscn" type="PackedScene" id=5]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
@@ -17,7 +17,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 16.105, 15.9901 )
 
 [node name="GlitchRigid" type="Area2D"]
@@ -26,16 +26,16 @@ collision_mask = 2
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 playing = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/StaticBody2D"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="GlitchHum" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
@@ -48,3 +48,4 @@ visible = true
 [connection signal="body_entered" from="." to="." method="_on_GlitchRigid_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_GlitchRigid_body_exited"]
 [connection signal="input_event" from="." to="." method="_on_GlitchRigid_input_event"]
+[connection signal="code_correct" from="CanvasLayer/GlitchPuzzle" to="." method="_on_GlitchPuzzle_code_correct"]

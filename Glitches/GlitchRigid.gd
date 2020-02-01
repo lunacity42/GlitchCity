@@ -11,8 +11,15 @@ func _on_GlitchRigid_body_exited(body):
 	$GlitchHum.playing = false
 	$CanvasLayer/GlitchPuzzle.hide()
 
-
 func _on_GlitchRigid_input_event(viewport, event, shape_idx):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) and in_glitch_area:
 		print("yay")
 		$CanvasLayer/GlitchPuzzle.popup_centered()
+
+func glitch_removed():
+	queue_free()
+
+
+func _on_GlitchPuzzle_code_correct():
+	$CanvasLayer/GlitchPuzzle.hide()
+	queue_free()
