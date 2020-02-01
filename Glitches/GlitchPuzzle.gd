@@ -1,6 +1,9 @@
 extends Popup
 
 onready var display = $VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer/Display
+onready var label = $VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer/Label
+onready var original_text = label.text
+onready var fill_in_text = PoolStringArray(label.text.split("*", false))
 
 var key_word = ["c","o","d","e"]
 var guess = []
@@ -39,9 +42,16 @@ func enter(button):
 	update_display()
 
 func update_display():
-	display.text = PoolStringArray(guess).join("")
+	label.text = fill_in_text[0] + PoolStringArray(guess).join("") + count_remaining_asterisks() + fill_in_text[1]
+	
+func count_remaining_asterisks():
+	var remaining_asterisks = ""
+	for i in range(key_word.size() - guess.size()):
+		remaining_asterisks += "*"
+	return remaining_asterisks
 
 func reset_lock():
+	label.text = original_text
 	display.text = ""
 	guess.clear()
 
