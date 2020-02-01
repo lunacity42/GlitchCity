@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const SPEED = 10
-const MAX_SPEED = 100
+const SPEED = 15
+const MAX_SPEED = 150
 const FRICTION = 0.1
 
 var motion = Vector2()
@@ -45,3 +45,5 @@ func update_movement():
 
 func hack_glitch():
 	pass
+#	if get_tree().GlitchRigid.in_glitch_area and Input.is_action_pressed("interact"):
+#		print("yay")

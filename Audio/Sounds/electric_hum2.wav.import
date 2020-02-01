@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/electric_hum2.wav-ac6bc163d52987fa71e6d4f3e3a23af1.sample"
+
+[deps]
+
+source_file="res://Audio/Sounds/electric_hum2.wav"
+dest_files=[ "res://.import/electric_hum2.wav-ac6bc163d52987fa71e6d4f3e3a23af1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

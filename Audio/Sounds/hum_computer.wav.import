@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hum_computer.wav-4bb3e390d04a895072b65c0b800226d1.sample"
+
+[deps]
+
+source_file="res://Audio/Sounds/hum_computer.wav"
+dest_files=[ "res://.import/hum_computer.wav-4bb3e390d04a895072b65c0b800226d1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

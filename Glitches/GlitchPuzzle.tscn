@@ -1,0 +1,158 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GFX/Environment/Floor_Steel_Clean.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Environment/Floor_Steel_Scratched.png" type="Texture" id=2]
+[ext_resource path="res://Glitches/GlitchPuzzle.gd" type="Script" id=3]
+
+[node name="GlitchPuzzle" type="Popup"]
+margin_right = 400.0
+margin_bottom = 500.0
+script = ExtResource( 3 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 15.0
+margin_right = -10.0
+margin_bottom = -15.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisplayContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 380.0
+margin_bottom = 200.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/DisplayContainer"]
+margin_left = 14.0
+margin_right = 364.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 350, 200 )
+texture = ExtResource( 2 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Display" type="Label" parent="VBoxContainer/DisplayContainer"]
+margin_left = 88.0
+margin_top = 93.0
+margin_right = 291.0
+margin_bottom = 107.0
+size_flags_horizontal = 3
+text = "There will be broken **** here."
+align = 1
+
+[node name="ButtonContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 230.0
+margin_right = 380.0
+margin_bottom = 450.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ButtonContainer"]
+margin_left = 110.0
+margin_right = 270.0
+margin_bottom = 220.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+text = "s"
+
+[node name="Button2" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 60.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+text = "c"
+
+[node name="Button3" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 120.0
+margin_right = 160.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+text = "t"
+
+[node name="Button4" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_top = 60.0
+margin_right = 40.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 40, 40 )
+text = "d"
+
+[node name="Button5" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 40, 40 )
+text = "h"
+
+[node name="Button6" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 160.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 40, 40 )
+text = "i"
+
+[node name="Button7" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 40, 40 )
+text = "o"
+
+[node name="Button8" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 100.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 40, 40 )
+text = "k"
+
+[node name="Button9" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 160.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 40, 40 )
+text = "f"
+
+[node name="ButtonDel" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_top = 180.0
+margin_right = 40.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 40, 40 )
+text = "del"
+
+[node name="Button11" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 60.0
+margin_top = 180.0
+margin_right = 100.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 40, 40 )
+text = "e"
+
+[node name="ButtonOk" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
+margin_left = 120.0
+margin_top = 180.0
+margin_right = 160.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 40, 40 )
+text = "ok"
+[connection signal="code_correct" from="." to="." method="_on_GlitchPuzzle_code_correct"]
