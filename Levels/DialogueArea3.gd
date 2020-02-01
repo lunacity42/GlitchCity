@@ -1,7 +1,7 @@
 extends Area2D
 
 var in_dialogue_area = false
-var dialogue_content = "3rd line of intro."
+var dialogue_content = "Ah, I must always do everything by myself."
 
 func _on_DialogueArea_body_entered(body):
 	in_dialogue_area = true
