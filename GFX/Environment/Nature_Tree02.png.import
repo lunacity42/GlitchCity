@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Nature_Tree02.png-b741e1ca1e0c0f15fc14540418328187.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://GFX/Environment/Nature_Tree02.png"
+dest_files=[ "res://.import/Nature_Tree02.png-b741e1ca1e0c0f15fc14540418328187.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,8 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://GFX/Environment/Wall_solid_block.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Environment/Floor_Steel_Clean.png" type="Texture" id=2]
 [ext_resource path="res://GFX/Environment/Floor_Steel_Scratched.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Environment/Pavement_tile.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Environment/Office_floor_tile.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Environment/Office_wall_bottom_floor.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Environment/Office_corner_bottom_left.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Environment/Pavement_tile_cracked.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Environment/Office_corner_bottom_right.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Environment/Office_corner_top_left.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Environment/Office_corner_top_right.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Environment/Office_wall_left_floor.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Environment/Office_wall_top_floor.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Environment/Office_wall_right_floor.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.8222, 16.0093 )
@@ -24,3 +35,104 @@ texture = ExtResource( 2 )
 [node name="FloorSteelScratched" type="Sprite" parent="."]
 position = Vector2( 104.659, 68.2558 )
 texture = ExtResource( 3 )
+
+[node name="FloorOffice" type="Sprite" parent="."]
+position = Vector2( 0, 135.697 )
+texture = ExtResource( 5 )
+
+[node name="WallOfficeCornerBottomLeft" type="Sprite" parent="."]
+position = Vector2( -47.7921, 96 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallOfficeCornerBottomLeft"]
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeCornerBottomLeft/StaticBody2D"]
+polygon = PoolVector2Array( -16.2079, -16, -8.20795, -16, -8.20795, 8, 15.7921, 8, 15.7921, 16, -16.2079, 16 )
+
+[node name="WallOfficeCornerBottomRight" type="Sprite" parent="."]
+position = Vector2( 40, 96 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WallOfficeCornerBottomRight"]
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeCornerBottomRight/StaticBody2D2"]
+rotation = -1.57079
+polygon = PoolVector2Array( -16.2079, -16, -8.20795, -16, -8.20795, 8, 15.7921, 8, 15.7921, 16, -16.2079, 16 )
+
+[node name="WallOfficeCornerTopLeft" type="Sprite" parent="."]
+position = Vector2( -48, 56 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WallOfficeCornerTopLeft"]
+rotation = 1.57079
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeCornerTopLeft/StaticBody2D2"]
+polygon = PoolVector2Array( -16.2079, -16, -8.20795, -16, -8.20795, 8, 15.7921, 8, 15.7921, 16, -16.2079, 16 )
+
+[node name="WallOfficeCornerTopRight" type="Sprite" parent="."]
+position = Vector2( 40, 56 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="WallOfficeCornerTopRight"]
+rotation = 3.14159
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeCornerTopRight/StaticBody2D3"]
+polygon = PoolVector2Array( -16.2079, -16, -8.20795, -16, -8.20795, 8, 15.7921, 8, 15.7921, 16, -16.2079, 16 )
+
+[node name="WallOfficeBottom" type="Sprite" parent="."]
+position = Vector2( 0, 96 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallOfficeBottom"]
+position = Vector2( 0, 8 )
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeBottom/StaticBody2D"]
+polygon = PoolVector2Array( -16, 0, 16, 0, 16, 8, -16, 8 )
+
+[node name="WallOfficeUp" type="Sprite" parent="."]
+position = Vector2( 0, 56 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WallOfficeUp"]
+position = Vector2( 0, -16 )
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeUp/StaticBody2D2"]
+polygon = PoolVector2Array( -16, 0, 16, 0, 16, 8, -16, 8 )
+
+[node name="WallOfficeLeft" type="Sprite" parent="."]
+position = Vector2( -88, 96 )
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="WallOfficeLeft"]
+position = Vector2( -7.99998, 0 )
+rotation = 1.57079
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeLeft/StaticBody2D3"]
+polygon = PoolVector2Array( -16, 0, 16, 0, 16, 8, -16, 8 )
+
+[node name="WallOfficeRight" type="Sprite" parent="."]
+position = Vector2( -88, 56 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="WallOfficeRight"]
+position = Vector2( 16, 0 )
+rotation = 1.57079
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallOfficeRight/StaticBody2D4"]
+polygon = PoolVector2Array( -16, 0, 16, 0, 16, 8, -16, 8 )
+
+[node name="FloorPavement" type="Sprite" parent="."]
+position = Vector2( 120.659, 232.291 )
+texture = ExtResource( 4 )
+
+[node name="FloorPavementCrack" type="Sprite" parent="."]
+position = Vector2( 120.659, 151.755 )
+texture = ExtResource( 8 )

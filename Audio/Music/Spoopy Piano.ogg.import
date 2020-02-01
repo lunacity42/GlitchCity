@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Spoopy Piano.ogg-1693e17ed9ff2fa58684312876c120bd.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/Spoopy Piano.ogg"
+dest_files=[ "res://.import/Spoopy Piano.ogg-1693e17ed9ff2fa58684312876c120bd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
