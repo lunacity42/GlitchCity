@@ -1,6 +1,7 @@
 extends Area2D
 
 var in_glitch_area = false
+signal area_cleared
 
 func _on_GlitchRigid_body_entered(body):
 	in_glitch_area = true
@@ -23,4 +24,5 @@ func _input(event):
 
 func _on_GlitchPuzzle_code_correct():
 	$CanvasLayer/GlitchPuzzle.hide()
+	emit_signal("area_cleared")
 	queue_free()

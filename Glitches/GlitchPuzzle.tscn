@@ -80,7 +80,6 @@ texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 64, 32 )
 
 [node name="GlitchPuzzle" type="Popup"]
-visible = true
 margin_right = 400.0
 margin_bottom = 500.0
 script = ExtResource( 3 )
@@ -104,7 +103,7 @@ margin_left = 10.0
 margin_top = 15.0
 margin_right = -10.0
 margin_bottom = -15.0
-custom_constants/separation = 42
+custom_constants/separation = 50
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -151,9 +150,9 @@ __meta__ = {
 }
 
 [node name="ButtonContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 242.0
+margin_top = 250.0
 margin_right = 380.0
-margin_bottom = 462.0
+margin_bottom = 470.0
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/ButtonContainer"]
 margin_left = 110.0
@@ -169,6 +168,9 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "s"
 
 [node name="Button2" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -178,6 +180,9 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "c"
 
 [node name="Button3" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -187,6 +192,9 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "t"
 
 [node name="Button4" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -196,6 +204,9 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "d"
 
 [node name="Button5" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -206,6 +217,9 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "h"
 
 [node name="Button6" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -216,6 +230,9 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "i"
 
 [node name="Button7" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -225,6 +242,9 @@ margin_bottom = 160.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "o"
 
 [node name="Button8" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -235,6 +255,9 @@ margin_bottom = 160.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "k"
 
 [node name="Button9" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -245,6 +268,9 @@ margin_bottom = 160.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "f"
 
 [node name="ButtonDel" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -254,6 +280,9 @@ margin_bottom = 220.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 13 )
 custom_styles/normal = SubResource( 14 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "del"
 
 [node name="Button11" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -264,6 +293,9 @@ margin_bottom = 220.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/normal = SubResource( 16 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "e"
 
 [node name="ButtonOk" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
@@ -274,5 +306,8 @@ margin_bottom = 220.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/pressed = SubResource( 17 )
 custom_styles/normal = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "ok"
 [connection signal="code_correct" from="." to="." method="_on_GlitchPuzzle_code_correct"]

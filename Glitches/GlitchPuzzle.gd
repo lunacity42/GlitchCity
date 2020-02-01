@@ -55,8 +55,3 @@ func reset_lock():
 	display.text = ""
 	guess.clear()
 
-
-
-
-
-
