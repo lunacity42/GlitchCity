@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://GFX/Environment/Nature_grass_tile.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Environment/Red_brick_wall.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://GFX/Environment/Pavement_tile.png" type="Texture" id=7]
 [ext_resource path="res://GFX/Environment/Pavement_tile_cracked.png" type="Texture" id=8]
 [ext_resource path="res://GFX/Environment/Steel_Door.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Environment/Office_desk.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.5733, 16.4063 )
@@ -28,7 +29,11 @@ extents = Vector2( 16.0909, 16.0965 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 17.1564, 3.67572 )
 
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 16.7932, 16.6168 )
+
 [node name="Node2D" type="Node2D"]
+position = Vector2( -54.1495, -151.999 )
 
 [node name="brick_wall" type="Sprite" parent="."]
 texture = ExtResource( 3 )
@@ -94,3 +99,15 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door_steel/StaticBody2D"]
 shape = SubResource( 6 )
+
+[node name="wall_invis" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 3.8147e-06, -78.5005 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="wall_invis"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall_invis/StaticBody2D"]
+position = Vector2( 0.0818939, -0.152115 )
+shape = SubResource( 8 )

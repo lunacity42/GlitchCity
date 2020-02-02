@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=16 format=2]
+[gd_resource type="TileSet" load_steps=18 format=2]
 
 [ext_resource path="res://GFX/Environment/Nature_grass_tile.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Environment/Red_brick_wall.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://GFX/Environment/Pavement_tile.png" type="Texture" id=7]
 [ext_resource path="res://GFX/Environment/Pavement_tile_cracked.png" type="Texture" id=8]
 [ext_resource path="res://GFX/Environment/Steel_Door.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Environment/Office_desk.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.5733, 16.4063 )
@@ -27,6 +28,9 @@ extents = Vector2( 16.0909, 16.0965 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 17.1564, 3.67572 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 16.7932, 16.6168 )
 
 [resource]
 0/name = "brick_wall"
@@ -155,3 +159,19 @@ extents = Vector2( 17.1564, 3.67572 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 8/z_index = 0
+9/name = "wall_invis"
+9/texture = ExtResource( 10 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 0 )
+9/region = Rect2( 0, 0, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 16, 16 )
+9/navigation_offset = Vector2( 16, 16 )
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.0819, 15.8479 )
+} ]
+9/z_index = 0
