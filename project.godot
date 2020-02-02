@@ -19,6 +19,10 @@ config/name="Glitch_City"
 run/main_scene="res://Levels/LevelOffice.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 move_up={
