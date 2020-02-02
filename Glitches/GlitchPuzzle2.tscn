@@ -80,6 +80,7 @@ texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 64, 32 )
 
 [node name="GlitchPuzzle" type="Popup"]
+visible = true
 margin_right = 400.0
 margin_bottom = 500.0
 script = ExtResource( 3 )
