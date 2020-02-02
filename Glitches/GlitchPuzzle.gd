@@ -5,7 +5,7 @@ onready var label = $VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer/
 onready var original_text = label.text
 onready var fill_in_text = PoolStringArray(label.text.split("*", false))
 
-var key_word = ["c","o","d","e"]
+var key_word = ["f","l","i","p"]
 var guess = []
 
 signal code_correct
@@ -52,6 +52,5 @@ func count_remaining_asterisks():
 
 func reset_lock():
 	label.text = original_text
-	display.text = ""
 	guess.clear()
 

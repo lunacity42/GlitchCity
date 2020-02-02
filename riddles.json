@@ -1,6 +1,6 @@
 {
 	"light": [
-		"def turn_on(lamp):\n    if lamp.is_off():\n        lamp.switch.****()",
+		"def turn_on(light):\n    if light.is_off():\n        switch.****()",
 		"flip"
 	],
 	"ladder": [
