@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/outdoor_env.tres" type="TileSet" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://Dialogue/DialogueAreaSewer.gd" type="Script" id=8]
 [ext_resource path="res://Dialogue/DialogueArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Dialogue/DialogueBoxSewer.tscn" type="PackedScene" id=10]
+[ext_resource path="res://GFX/Environment/Car.png" type="Texture" id=11]
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=1]
 emission_shape = 2
 emission_box_extents = Vector3( 900, 500, 1 )
 flag_disable_z = true
@@ -19,8 +20,11 @@ gravity = Vector3( 0, -20, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13.4409, 5.18762 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 63.1022, 28.6027 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -50,7 +54,7 @@ visible = false
 position = Vector2( 0, -128 )
 amount = 1000
 visibility_rect = Rect2( -1000, -100, 2000, 1000 )
-process_material = SubResource( 2 )
+process_material = SubResource( 1 )
 texture = ExtResource( 7 )
 
 [node name="GlitchTree" parent="." instance=ExtResource( 3 )]
@@ -70,7 +74,7 @@ texture = ExtResource( 6 )
 [node name="StaticBody2D" type="StaticBody2D" parent="NPC_child"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_child/StaticBody2D"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="DialogueAreaSewer" parent="." instance=ExtResource( 9 )]
 position = Vector2( -384, -32 )
@@ -80,10 +84,59 @@ script = ExtResource( 8 )
 offset = Vector2( -650, -575 )
 transform = Transform2D( 1, 0, 0, 1, -650, -575 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Car" type="Sprite" parent="."]
+position = Vector2( -140.429, 35.6903 )
+rotation = 1.57
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Car"]
+rotation = -2.39856
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car/StaticBody2D"]
+rotation = 0.82164
+shape = SubResource( 3 )
+
+[node name="Car2" type="Sprite" parent="."]
+position = Vector2( 575.711, 3.03251 )
+rotation = 4.19397
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Car2"]
+rotation = -2.39856
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car2/StaticBody2D"]
+rotation = 0.82164
+shape = SubResource( 3 )
+
+[node name="Car3" type="Sprite" parent="."]
+position = Vector2( -428.517, 137.163 )
+rotation = 6.30599
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Car3"]
+rotation = -2.39856
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car3/StaticBody2D"]
+rotation = 0.82164
+shape = SubResource( 3 )
+
+[node name="Car4" type="Sprite" parent="."]
+position = Vector2( -360.869, 137.163 )
+rotation = 6.27574
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Car4"]
+rotation = -2.39856
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car4/StaticBody2D"]
+rotation = 0.82164
+shape = SubResource( 3 )
 [connection signal="area_cleared" from="GlitchTree" to="." method="_on_GlitchTree_area_cleared"]
 [connection signal="area_cleared" from="GlitchSewer" to="." method="_on_GlitchSewer_area_cleared"]
-[connection signal="body_entered" from="DialogueAreaSewer" to="DialogueAreaSewer" method="_on_DialogueAreaSewer_body_entered"]
 [connection signal="body_entered" from="DialogueAreaSewer" to="." method="_on_DialogueAreaSewer_body_entered"]
+[connection signal="body_entered" from="DialogueAreaSewer" to="DialogueAreaSewer" method="_on_DialogueAreaSewer_body_entered"]
 [connection signal="body_exited" from="DialogueAreaSewer" to="DialogueAreaSewer" method="_on_DialogueAreaSewer_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
