@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/outdoor_env.tres" type="TileSet" id=2]
 [ext_resource path="res://Glitches/GlitchTree.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Glitches/GlitchSewer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/LevelStreet.gd" type="Script" id=5]
+[ext_resource path="res://GFX/Characters/NPC1.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.4409, 5.18762 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -35,3 +39,15 @@ position = Vector2( -288, -160 )
 
 [node name="GlitchSewer" parent="." instance=ExtResource( 4 )]
 position = Vector2( -384, -32 )
+
+[node name="NPC_child" type="Sprite" parent="."]
+visible = false
+position = Vector2( -344.793, -58.8336 )
+rotation = 3.14159
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NPC_child"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_child/StaticBody2D"]
+shape = SubResource( 1 )
+[connection signal="area_cleared" from="GlitchSewer" to="." method="_on_GlitchSewer_area_cleared"]
