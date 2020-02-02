@@ -80,7 +80,6 @@ texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 64, 32 )
 
 [node name="GlitchPuzzle" type="Popup"]
-visible = true
 margin_right = 400.0
 margin_bottom = 500.0
 script = ExtResource( 3 )
@@ -133,11 +132,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer"]
-margin_right = 350.0
-margin_bottom = 48.0
-text = "def turn_on(light):
-    if light.is_off():
-	        switch.****()"
+margin_right = 596.0
+margin_bottom = 65.0
+text = "def help(child):
+    self.build(ladder)
+    while *****.y_position < 0:
+	        child.y_position+= 1"
 
 [node name="ButtonContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 250.0

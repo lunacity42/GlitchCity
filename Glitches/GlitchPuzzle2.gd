@@ -5,7 +5,7 @@ onready var label = $VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer/
 onready var original_text = label.text
 onready var fill_in_text = PoolStringArray(label.text.split("*", false))
 
-var key_word = ["f", "l", "i", "p"]
+var key_word = ["c", "h", "i", "l", "d"]
 var guess = []
 
 signal code_correct
