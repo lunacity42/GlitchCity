@@ -32,8 +32,10 @@ func Button_pressed(button):
 
 func check_guess():
 	if guess == key_word:
+		$SoundRight.playing = true
 		emit_signal("code_correct")
 	else:
+		$SoundWrong.playing = true
 		reset_lock()
 
 func enter(button):
@@ -52,4 +54,3 @@ func count_remaining_asterisks():
 func reset_lock():
 	label.text = original_text
 	guess.clear()
-
