@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/LevelOffice2.gd" type="Script" id=2]
 [ext_resource path="res://Audio/Music/Spoopy Piano.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Levels/neon lights.tres" type="TileSet" id=4]
 [ext_resource path="res://GFX/Environment/Chair.png" type="Texture" id=5]
 [ext_resource path="res://GFX/Environment/Office_desk.png" type="Texture" id=6]
 [ext_resource path="res://GFX/Environment/Office_desk_papers.png" type="Texture" id=7]
@@ -56,6 +57,7 @@ shape = SubResource( 1 )
 [node name="TileMap2" type="TileMap" parent="." index="8"]
 position = Vector2( 1112.14, -181.907 )
 rotation = 1.5683
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 917511, 5, 0, 917519, 5, 0, 917522, 5, 0, 917525, 5, 0 )

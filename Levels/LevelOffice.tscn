@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Dialogue/DialogueArea.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Dialogue/DialogueArea.gd" type="Script" id=4]
 [ext_resource path="res://Dialogue/DialogueArea3.gd" type="Script" id=5]
 [ext_resource path="res://Levels/ChangeLevel.gd" type="Script" id=6]
+[ext_resource path="res://Levels/neon lights.tres" type="TileSet" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.8758, 72.6509 )
@@ -15,36 +16,42 @@ extents = Vector2( 25.8758, 72.6509 )
 [node name="TileMap" parent="." index="0"]
 tile_data = PoolIntArray( 458752, 10, 0, 458753, 13, 0, 458754, 13, 0, 458755, 13, 0, 458756, 13, 0, 458757, 13, 0, 458758, 13, 0, 458759, 13, 0, 458760, 13, 0, 458761, 13, 0, 458762, 13, 0, 458763, 13, 0, 458764, 13, 0, 458765, 13, 0, 458766, 13, 0, 458767, 13, 0, 458768, 13, 0, 458769, 13, 0, 458770, 13, 0, 458771, 13, 0, 458772, 13, 0, 458773, 13, 0, 458774, 13, 0, 458775, 13, 0, 458776, 13, 0, 458777, 13, 0, 458778, 13, 0, 458779, 13, 0, 458780, 13, 0, 458781, 13, 0, 458782, 13, 0, 524288, 14, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 3, 0, 524304, 3, 0, 524305, 3, 0, 524306, 3, 0, 524307, 3, 0, 524308, 3, 0, 524309, 3, 0, 524310, 3, 0, 524311, 3, 0, 524312, 3, 0, 524313, 3, 0, 524314, 3, 0, 524315, 3, 0, 524316, 3, 0, 524317, 3, 0, 524318, 3, 0, 589824, 8, 0, 589825, 12, 0, 589826, 12, 0, 589827, 12, 0, 589828, 12, 0, 589829, 12, 0, 589830, 12, 0, 589831, 12, 0, 589832, 12, 0, 589833, 12, 0, 589834, 12, 0, 589835, 12, 0, 589836, 12, 0, 589837, 12, 0, 589838, 12, 0, 589839, 12, 0, 589840, 12, 0, 589841, 12, 0, 589842, 12, 0, 589843, 12, 0, 589844, 12, 0, 589845, 12, 0, 589846, 12, 0, 589847, 12, 0, 589848, 12, 0, 589849, 12, 0, 589850, 12, 0, 589851, 12, 0, 589852, 12, 0, 589853, 12, 0, 589854, 12, 0 )
 
-[node name="GlitchRigid" parent="." index="1"]
+[node name="TileMap2" type="TileMap" parent="." index="1"]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 458754, 5, 0, 458758, 4, 0, 458762, 5, 0, 458766, 4, 0, 458770, 5, 0, 458774, 4, 0, 458778, 5, 0, 458782, 4, 0 )
+
+[node name="GlitchRigid" parent="." index="2"]
 visible = false
 position = Vector2( 629.804, 15 )
 
-[node name="Glitch" parent="." index="2"]
+[node name="Glitch" parent="." index="3"]
 visible = false
 position = Vector2( 220, 15 )
 
-[node name="Player" parent="." index="4"]
+[node name="Player" parent="." index="5"]
 position = Vector2( 38.9814, 272.037 )
 
-[node name="DialogueArea" parent="." index="6"]
+[node name="DialogueArea" parent="." index="7"]
 position = Vector2( 189.036, 272.037 )
 scale = Vector2( 1.64, 1 )
 
-[node name="DialogueArea2" parent="." index="7" instance=ExtResource( 2 )]
+[node name="DialogueArea2" parent="." index="8" instance=ExtResource( 2 )]
 position = Vector2( 485.302, 272.037 )
 scale = Vector2( 1.6, 1 )
 script = ExtResource( 4 )
 
 [node name="DialogueBox" parent="DialogueArea2" index="1" instance=ExtResource( 3 )]
 
-[node name="DialogueArea3" parent="." index="8" instance=ExtResource( 2 )]
+[node name="DialogueArea3" parent="." index="9" instance=ExtResource( 2 )]
 position = Vector2( 777.488, 272.037 )
 scale = Vector2( 1.6, 1 )
 script = ExtResource( 5 )
 
 [node name="DialogueBox" parent="DialogueArea3" index="1" instance=ExtResource( 3 )]
 
-[node name="ChangeLevel" type="Area2D" parent="." index="9"]
+[node name="ChangeLevel" type="Area2D" parent="." index="10"]
 position = Vector2( 966.595, 272.037 )
 collision_layer = 4
 collision_mask = 2
