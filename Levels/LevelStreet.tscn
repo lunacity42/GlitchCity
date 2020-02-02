@@ -83,7 +83,7 @@ transform = Transform2D( 1, 0, 0, 1, -650, -575 )
 [node name="Timer" type="Timer" parent="."]
 [connection signal="area_cleared" from="GlitchTree" to="." method="_on_GlitchTree_area_cleared"]
 [connection signal="area_cleared" from="GlitchSewer" to="." method="_on_GlitchSewer_area_cleared"]
-[connection signal="body_entered" from="DialogueAreaSewer" to="DialogueAreaSewer" method="_on_DialogueAreaSewer_body_entered"]
 [connection signal="body_entered" from="DialogueAreaSewer" to="." method="_on_DialogueAreaSewer_body_entered"]
+[connection signal="body_entered" from="DialogueAreaSewer" to="DialogueAreaSewer" method="_on_DialogueAreaSewer_body_entered"]
 [connection signal="body_exited" from="DialogueAreaSewer" to="DialogueAreaSewer" method="_on_DialogueAreaSewer_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

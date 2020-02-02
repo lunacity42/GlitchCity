@@ -10,6 +10,7 @@ func wait():
 func _process(delta):
 	if !waitfortimer: # checks if waitfortimer is false
 		print("the end")
+		get_tree().change_scene("res://Levels/End.tscn")
 
 func _on_Timer_timeout():
 	$Timer.stop()
