@@ -1,6 +1,5 @@
 extends Popup
 
-onready var display = $VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer/Display
 onready var label = $VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer/Label
 onready var original_text = label.text
 onready var fill_in_text = PoolStringArray(label.text.split("*", false))
