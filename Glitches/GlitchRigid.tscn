@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GFX/Environment/Office_floor_tile.png" type="Texture" id=1]
-[ext_resource path="res://GFX/Environment/Neon_light_White_on.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Particles/Glitch_Particle1.png" type="Texture" id=2]
 [ext_resource path="res://Glitches/GlitchRigid.gd" type="Script" id=3]
 [ext_resource path="res://Audio/Sounds/electric_hum2.wav" type="AudioStream" id=4]
 [ext_resource path="res://Glitches/GlitchPuzzle.tscn" type="PackedScene" id=5]
@@ -47,13 +47,14 @@ playing = true
 shape = SubResource( 3 )
 
 [node name="Particles2D" type="Particles2D" parent="AnimatedSprite"]
-amount = 20
+amount = 40
 randomness = 1.0
 process_material = SubResource( 4 )
 texture = ExtResource( 2 )
 
 [node name="GlitchHum" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
+volume_db = 10.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

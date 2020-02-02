@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Levels/DialogueArea.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Levels/DialogueBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/DialogueArea.gd" type="Script" id=4]
-[ext_resource path="res://Levels/DialogueArea3.gd" type="Script" id=5]
+[ext_resource path="res://Dialogue/DialogueArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Dialogue/DialogueBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Dialogue/DialogueArea.gd" type="Script" id=4]
+[ext_resource path="res://Dialogue/DialogueArea3.gd" type="Script" id=5]
 [ext_resource path="res://Levels/ChangeLevel.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
