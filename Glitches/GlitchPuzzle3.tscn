@@ -132,11 +132,11 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="VBoxContainer/DisplayContainer/NinePatchRect/VBoxContainer"]
-margin_right = 350.0
+margin_right = 467.0
 margin_bottom = 48.0
-text = "def turn_on(light):
-    if light.is_off():
-	        switch.****()"
+text = "def extinguish_fire():
+    while flames.height > 0:
+        weather.****()"
 
 [node name="ButtonContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 250.0
@@ -160,7 +160,7 @@ custom_styles/normal = ExtResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-text = "s"
+text = "n"
 
 [node name="Button2" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
 margin_left = 60.0
@@ -196,7 +196,7 @@ custom_styles/normal = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-text = "d"
+text = "r"
 
 [node name="Button5" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
 margin_left = 60.0
@@ -247,7 +247,7 @@ custom_styles/normal = SubResource( 10 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-text = "p"
+text = "a"
 
 [node name="Button9" type="Button" parent="VBoxContainer/ButtonContainer/GridContainer"]
 margin_left = 120.0
